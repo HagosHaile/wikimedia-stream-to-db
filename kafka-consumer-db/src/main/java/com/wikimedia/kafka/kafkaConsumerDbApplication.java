@@ -7,6 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class kafkaConsumerDbApplication {
     public static void main(String[] args) {
-        SpringApplication.run(kafkaConsumerDbApplication.class, args);
+        SpringApplication.run(kafkaConsumerDbApplication.class);
     }
 }

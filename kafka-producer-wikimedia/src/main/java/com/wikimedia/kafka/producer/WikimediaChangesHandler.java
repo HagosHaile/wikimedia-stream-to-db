@@ -30,7 +30,7 @@ public class WikimediaChangesHandler implements EventHandler {
     @Override
     public void onMessage(String s, MessageEvent messageEvent) throws Exception {
         kafkaTemplate.send(topic, messageEvent.getData());
-        LOGGER.info("Message sent: {}", messageEvent.getData());
+        LOGGER.info("kafka Message sent: {}", messageEvent.getData());
     }
 
     @Override

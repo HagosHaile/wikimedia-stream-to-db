@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class KafkaProducerWikimediaApplication implements CommandLineRunner {
     public static void main(String[] args) {
-        SpringApplication.run(KafkaProducerWikimediaApplication.class, args);
+        SpringApplication.run(KafkaProducerWikimediaApplication.class);
     }
 
     @Autowired
