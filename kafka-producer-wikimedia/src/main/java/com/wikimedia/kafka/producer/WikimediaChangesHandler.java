@@ -18,23 +18,24 @@ public class WikimediaChangesHandler implements EventHandler {
         this.topic = topic;
     }
     @Override
-    public void onOpen() throws Exception {
+    public void onOpen() {
 
     }
 
     @Override
-    public void onClosed() throws Exception {
+    public void onClosed() {
 
     }
 
     @Override
-    public void onMessage(String s, MessageEvent messageEvent) throws Exception {
+    public void onMessage(String s, MessageEvent messageEvent) {
+        LOGGER.info("Received Wikimedia changes: {}", messageEvent);
         kafkaTemplate.send(topic, messageEvent.getData());
         LOGGER.info("kafka Message sent: {}", messageEvent.getData());
     }
 
     @Override
-    public void onComment(String s) throws Exception {
+    public void onComment(String s) {
 
     }
 
